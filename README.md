@@ -152,5 +152,8 @@ However, there is another **Critical Path** waiting for me to converge in the re
 
 Thanks for watching, this is Snow, much love to you all. 
 See you in the next stage this September when my freshman year begins. Until then, signing off!
+I was a bit too caught up in enjoying life at 19 and forgot to commit the actual physical image files. 😁😅 My bad. The hardware evidence is now physically synced to the repository. Thanks for watching. See you in the next cycle. 
+has been supplemented 
+
 
 
