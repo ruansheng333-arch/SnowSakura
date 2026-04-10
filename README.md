@@ -154,6 +154,9 @@ This period of extreme **Physical Layer** squeezing has allowed me to truly achi
 * **Worst Negative Slack (WNS): 0.511 ns** — Under the lethal 1.2ns cross-module deadline, I forcefully extracted an absolute margin of half a nanosecond.
 * **Logic Level = 0** — The signal launches from **RX** with zero logic gate attrition, driving straight into the **TX** core relying purely on bare **Copper Traces**.
 * **Worst Hold Slack (WHS): 0.009 ns** — A mere 9 picoseconds! This means our parsing logic has been relentlessly pinned at absolute zero distance to the physical pins, perfectly illustrating what "flying close to the ground" means in **HFT**.
+### Next Use python Test
+<img width="1073" height="695" alt="Snipaste_2026-04-11_04-26-58" src="https://github.com/user-attachments/assets/dd56b53e-c019-4972-98d2-83507355269d" />
+
 
 
 
