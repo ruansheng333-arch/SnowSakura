@@ -152,14 +152,14 @@ This period of extreme **Physical Layer** squeezing has allowed me to truly achi
 * **Logic Level = 0** — The signal launches from **RX** with zero logic gate attrition, driving straight into the **TX** core relying purely on bare **Copper Traces**.
 * **Worst Hold Slack (WHS): 0.009 ns** — A mere 9 picoseconds! This means our parsing logic has been relentlessly pinned at absolute zero distance to the physical pins, perfectly illustrating what "flying close to the ground" means in **HFT**.
 ### Next Use python Test
-<img width="1073" height="695" alt="Snipaste_2026-04-11_04-26-58" src="https://github.com/user-attachments/assets/dd56b53e-c019-4972-98d2-83507355269d" />
+![SIM](pythontest_1.png)
 
 ### ### Major Milestone: IEEE 802.3 Framework Refactor & OMD-C Throughput Breakthrough
 
 **Current Status: v0.7-Alpha (Refactored)**
-<img width="1108" height="315" alt="Snipaste_2026-04-12_02-38-45" src="https://github.com/user-attachments/assets/7ceb0e70-6e79-4648-a698-99cb2f538220" />
-<img width="1152" height="580" alt="Snipaste_2026-04-12_02-38-36" src="https://github.com/user-attachments/assets/13875b2f-7465-457e-8344-56db6fd14fd1" />
-<img width="1062" height="588" alt="Snipaste_2026-04-12_02-39-00" src="https://github.com/user-attachments/assets/9078b994-f866-4e87-9c3a-3fb87ebadcf5" />
+![Overview](over1.png)
+![Python_Sim_1](pythonsim2.png)
+![Python_Sim_2](pythonsim2_2.png)
 
 
 
