@@ -67,7 +67,6 @@ We are running `GTH Raw Mode` on the Ultrascale+ architecture, stripping away al
 This isn't generic RTL synthesis; this is **direct physical mapping**. We are manually configuring registers (`mock_gth_data_reg`) and logic gates to absolutely minimize interconnect routing delay at the silicon level.
 ![Manual_Routing](朽木冬子_5.png)
 
-![Output_Waveform](tkyou_6.png)
 
 
 * **Clock Tree:** `IBUFDS_GTE4` -> `BUFG_GT_SYNC`. Direct-driven reference clock path ensuring zero-latency clock enables across the 16nm die matrix.
@@ -83,7 +82,6 @@ As the parsing logic scales, the timing window shrinks to its absolute physical 
 
 > **Proprietary Disclaimer:** > **Do not ask for the XDC constraint scripts.** The exact `set_property LOC/BEL` coordinate mappings and Phase Interpolator calibration values are proprietary and isolated. What you see here is the physical result; the manual routing logic behind it remains classified.
 ### Stage NEW: VU9P Matrix Scaling & SLR Isolation
-!fanout](shio_7.png)
 
 Scaling the core engine to the **Virtex UltraScale+ VU9P** architecture. In this 16nm multi-die matrix, the physical dimension of the silicon becomes the primary latency bottleneck.
 
@@ -93,8 +91,7 @@ Scaling the core engine to the **Virtex UltraScale+ VU9P** architecture. In this
 
 ### Stage 2: High-Fanout Congestion Management & Routing Matrix Pressure
 
-!rooting](utou_8.png)
-
+![Output_Waveform](tkyou_6.png)
 
 As the **OMD-C** parsing tree expands, **High Fanout** nodes (Fanout > 12) begin to strain the **Routing Matrix**. On a high-density device like the **VU9P**, even moderate fanout forces the router to bridge multiple **CLEM** tiles, leading to unpredictable timing skew.
 
@@ -104,7 +101,7 @@ As the **OMD-C** parsing tree expands, **High Fanout** nodes (Fanout > 12) begin
     * We prohibit the EDA tool from "lazy-routing" critical enable signals across the die. Instead, we force physical replicas of the **FF** to reside immediately adjacent to their target **LUT** clusters using `(* MAX_FANOUT = 12 *)` attributes.
 * **Strategic Buffer**: Maintaining a **2.011 ns** slack is not just for timing closure; it is a critical buffer for the upcoming **Order Book** parallel search logic. In the **VU9P** environment, **Fanout** is not a mere routing statistic—it is a direct threat to the **Zero Jitter** mandate.
   ### Stage 2: High-Fanout Congestion Management & Routing Matrix Pressure
-![hold](yuki_9.png)
+![rooting](shio_7.png)
 
 
 
@@ -134,13 +131,13 @@ Under the high-frequency heartbeat of **322.26MHz**, I saw through the automated
 
 #### Absolute Mastery over the Physical Layer
 This period of extreme **Physical Layer** squeezing has allowed me to truly achieve absolute control over every metal routing trace and every internal **Switchbox**. The single-path, low-level foundation for handling the **HKEX OMD-C** protocol is now rock-solid.
-<img width="1059" height="567" alt="Snipaste_2026-03-31_23-39-34" src="https://github.com/user-attachments/assets/675dee75-401b-4367-a812-52f95b177943" />
+[new_art](utou_8.png)
 
-<img width="2057" height="996" alt="image" src="https://github.com/user-attachments/assets/13a22890-0a25-494c-ae6e-c1f6e36d687a" />
+[new_art](yuki_9.png)
 
 #### New Simulation
-<img width="1102" height="544" alt="Snipaste_2026-04-11_02-34-34" src="https://github.com/user-attachments/assets/4b26d169-1d64-4091-823c-cb75858f31ca" />
-<img width="1110" height="735" alt="Snipaste_2026-04-11_03-05-14" src="https://github.com/user-attachments/assets/c923b34a-d88c-4106-a2ae-c7aaa1ba1a93" />
+[SIM](10sim2_1.png)
+[SIM](11sim2_2.png)
 ###  Technical Specification & Performance Edge
 
 * **Sub-Nanosecond OMD-C Gateway** — This repository hosts a high-performance OMD-C (Optimized Message Data-Cast) hardware parser and framer, engineered for sub-nanosecond precision in High-Frequency Trading (HFT) environments. By utilizing GTH Transceiver PMA/PCS Bypass (Raw Mode), this architecture achieves a deterministic U-turn latency that pushes the physical limits of the 16nm FinFET fabric.
