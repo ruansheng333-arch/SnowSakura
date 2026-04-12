@@ -41,7 +41,7 @@ Initial logic mapping and physical isolation.
 
 ![Timing_Summary](莓冰えな_3.jpg)
 
-![Clock_Tree](itigonena_4.png)
+![Clock_Tree](4ltigoriena_sim1.png)
 
 As the parsing logic scales, the timing window shrinks to its absolute physical limit.
 * **Timing Met**: **WNS** squeezed to **0.472 ns**, **WHS** at **0.030 ns**. 
@@ -57,7 +57,7 @@ As the parsing logic scales, the timing window shrinks to its absolute physical 
 
 #### I. Latency Validation: Waveform Snapshot
 We are running `GTH Raw Mode` on the Ultrascale+ architecture, stripping away all non-essential protocol overhead (e.g., standard 802.3 buffers, PCS alignment primitives) for direct hardware parallel data access. 
-![Physical_Mapping](ena4x2_.png)
+![Physical_Mapping](enasim4x2_.png)
 
 
 
