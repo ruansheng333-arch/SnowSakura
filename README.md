@@ -1,5 +1,5 @@
 # SnowSakura: Physical Layer Implementation Specs for 15EG  VU9P
-## Target: 31.5ns Deterministic Latency for HKEX-OMD-C Include(18nsPMALATENCY)
+## Target: 31.5nsLogicLatency+18nsPMALATENCY Deterministic for HKEX-OMD-C 
 
 ### Physical Layer Design Philosophy
 
